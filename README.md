@@ -36,4 +36,4 @@ Claude Code's automatic cleanup deletes transcripts older than that, and the ses
 ## Machines
 
 - OLCF Cirrus: `/gpfs/wolf2/arm/cli120/proj-shared/hengxiao80/claude_config`. `cleanupPeriodDays` is 3650 since 2026-10-23.
-- Mac laptop.
+- WE50969 (Mac): `/Users/xiao169/claude_config`. `cleanupPeriodDays` is 3650 since 2026-11-06.
