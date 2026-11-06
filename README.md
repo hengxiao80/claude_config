@@ -25,7 +25,15 @@ The links are per file, so a machine can keep rules of its own in `~/.claude/rul
 
 Rules are read when a Claude Code session starts, so a change shows up in the next session.
 
+Then, in that machine's `~/.claude/settings.json`, keep session transcripts for about 10 years instead of Claude Code's default of 30 days:
+
+```json
+"cleanupPeriodDays": 3650
+```
+
+Claude Code's automatic cleanup deletes transcripts older than that, and the sessions go with them: `claude -r` can no longer resume them, and the session index of `claude_sessions` (`/gpfs/wolf2/arm/cli120/proj-shared/hengxiao80/claude_sessions` on Cirrus) loses them. `settings.json` itself stays per machine, so the line goes in by hand.
+
 ## Machines
 
-- OLCF Cirrus: `/gpfs/wolf2/arm/cli120/proj-shared/hengxiao80/claude_config`.
+- OLCF Cirrus: `/gpfs/wolf2/arm/cli120/proj-shared/hengxiao80/claude_config`. `cleanupPeriodDays` is 3650 since 2026-10-23.
 - Mac laptop.
